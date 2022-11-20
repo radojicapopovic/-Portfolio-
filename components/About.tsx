@@ -46,13 +46,15 @@ export default function About({}: Props) {
           background
         </h4>
         <span className="text-base ">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum iure
-          rem magnam quis, modi placeat exercitationem. Magnam molestias, illo
-          inventore qui voluptatem voluptatum vel laudantium corrupti
-          exercitationem sint in dicta. Lorem ipsum dolor sit, amet consectetur
-          adipisicing elit. Possimus id modi officia voluptate atque quos cumque
-          maxime dicta provident dolores, tempore ex nisi incidunt quaerat,
-          voluptates, temporibus deleniti repudiandae recusandae!
+          Hi, I am Radojica Popović. 🪙 I am 20 year old Software Engineer with
+          2 and half years of experience in Software Development. I am mostly
+          Font End Developer. I Specialize at using React with both TypeScript
+          and JavaScript. I also have knowladge of building Full Stack
+          WebApplications using Next.js or Node and Express. 🪙 Building quality
+          websites and web applications were always my passion and my career
+          goal. I am a friendly, professional worker who will be happy to help
+          you. I can design your website from start to advance stage, from theme
+          customizations to unique features.
         </span>
       </div>
     </motion.div>
