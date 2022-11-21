@@ -1,10 +1,14 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { motion } from "framer-motion";
+import { Project } from "../typings";
+import { urlFor } from "../sanity";
 
-type Props = {};
+type Props = {
+  projects: Project;
+};
 
-export default function Projects({}: Props) {
-  const projects = [1, 2, 3, 4, 5];
+export default function Projects({ projects }: Props) {
   return (
     <motion.div
       initial={{
@@ -22,8 +26,11 @@ export default function Projects({}: Props) {
         Projects
       </h3>
       <div className="relavite w-full flex overflow-x-scroll overflow-y-hidden snap-x snap-mandatory z-20 scrollbar scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A]/80">
-        {projects.map((project, i) => (
-          <div key={project} className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen ">
+        {projects?.map((project, i) => (
+          <div
+            key={i}
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 items-center justify-center p-20 md:p-44 h-screen "
+          >
             <motion.img
               initial={{
                 y: -300,
@@ -39,22 +46,27 @@ export default function Projects({}: Props) {
               viewport={{
                 once: true,
               }}
-              src="https://play-lh.googleusercontent.com/y4bswMT02OROjzOPa5zDGsnXX5-cBABjF93j26seJH2cEHD4PuBW1d5VvwfYleeKf4_X"
+              src={urlFor(project?.image).url()}
               alt=""
-              className="h-64 w-64"
+              className="h-64 w-65 object-contain"
             />
             <div className="space-y-10 px-0 md:px-10 max-w-6xl">
               <h4 className="text-4xl font-semibold text-center">
-                <span className="underline decoration-[#F7AB0A]/50">
-                  Case Study of {i + 1} of {projects.length}:
-                </span>{" "}
-                UPS Clone
+                <span className="underline decoration-[#F7AB0A]/50"></span>{" "}
+                {project?.title}
               </h4>
+              <div className="flex items-center space-x-2 justify-center">
+                {project?.technologies.map((technology) => (
+                  <img
+                    key={technology._id}
+                    src={urlFor(technology.image).url()}
+                    alt=""
+                    className="h-10 w-10"
+                  />
+                ))}
+              </div>
               <span className="text-sm text-center md:text-left">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Maiores mollitia amet veniam magni! Distinctio deserunt animi
-                corrupti sequi doloremque, voluptatem iusto culpa possimus
-                cupiditate ea maiores alias natus explicabo soluta.
+                {project?.summary}
               </span>
             </div>
           </div>

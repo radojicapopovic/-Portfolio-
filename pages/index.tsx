@@ -91,14 +91,14 @@ export default Home;
 
 export async function getStaticProps() {
   const res = await sanityClient.fetch(query);
-  const experience: Experience[] = res;
+  const experiences: Experience[] = res;
   const res2 = await sanityClient.fetch(query2);
   const projects: Project[] = res2;
   const res3 = await sanityClient.fetch(query3);
   const skills: Skill[] = res3;
   return {
     props: {
-      experience,
+      experiences,
       projects,
       skills,
     },
