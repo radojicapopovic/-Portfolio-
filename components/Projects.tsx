@@ -50,7 +50,7 @@ export default function Projects({ projects }: Props) {
               alt=""
               className="h-64 w-65 object-contain"
             />
-            <div className="space-y-10 px-0 md:px-10 max-w-6xl">
+            <div className="space-y-15 px-0 md:px-10 max-w-6xl">
               <h4 className="text-4xl font-semibold text-center">
                 <span className="underline decoration-[#F7AB0A]/50"></span>{" "}
                 {project?.title}
@@ -65,7 +65,7 @@ export default function Projects({ projects }: Props) {
                   />
                 ))}
               </div>
-              <span className="text-sm text-center md:text-left">
+              <span className="text-sm text-center md:text-left pt-5">
                 {project?.summary}
               </span>
             </div>
