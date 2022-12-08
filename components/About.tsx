@@ -48,7 +48,7 @@ export default function About({}: Props) {
         <span className="text-base ">
           Hi, I am Radojica Popović. 🪙 I am 20 year old Software Engineer with
           2 and half years of experience in Software Development. I am mostly
-          Font End Developer. I Specialize at using React with both TypeScript
+          Front End Developer. I Specialize at using React with both TypeScript
           and JavaScript. I also have knowladge of building Full Stack
           WebApplications using Next.js or Node and Express. 🪙 Building quality
           websites and web applications were always my passion and my career
