@@ -2,8 +2,6 @@
 /* eslint-disable @next/next/no-img-element */
 import React from "react";
 import { motion } from "framer-motion";
-import { Project } from "../typings";
-import { urlFor } from "../sanity";
 import Image from "next/image";
 
 export default function Projects() {

@@ -57,16 +57,6 @@ export interface Experience extends SanityBody {
   technologies: Technology[];
 }
 
-export interface Project extends SanityBody {
-  map: any;
-  _type: "project";
-  title: string;
-  image: Image;
-  summary: string;
-  linkToBuild: string;
-  technologies: Technology[];
-}
-
 export interface Social extends SanityBody {
   _type: "social";
   title: string;
