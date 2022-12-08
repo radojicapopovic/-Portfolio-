@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import React from "react";
 import { Experience } from "../typings";
-import { urlFor } from "../sanity";
+// import { urlFor } from "../sanity";
 
 interface Props {
   experience: Experience;
@@ -27,7 +27,7 @@ const ExperienceCard = ({ experience }: Props) => {
           once: true,
         }}
         className="w-32 h-32 rounded-full md:rounded-full xl:w-[64px] xl:h-[64px] object-cover object-center "
-        src={urlFor(experience?.companyImage).url()}
+        // src={urlFor(experience?.companyImage).url()}
         alt=""
       />
       <div className="px-0 md:px-10">
@@ -38,7 +38,7 @@ const ExperienceCard = ({ experience }: Props) => {
             <img
               key={technology._id}
               className="h-10 w-10 rounded-full"
-              src={urlFor(technology.image).url()}
+              // src={urlFor(technology.image).url()}
               alt=""
             />
           ))}
