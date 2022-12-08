@@ -8,7 +8,7 @@ import WorkExperience from "../components/WorkExperience";
 import Projects from "../components/Projects";
 import Link from "next/link";
 import { Experience, Skill } from "../typings";
-import { sanityClient } from "../sanity";
+// import { sanityClient } from "../sanity";
 import { groq } from "next-sanity";
 import Contact from "../components/Contact";
 import Skills from "../components/Skills";
@@ -79,16 +79,16 @@ const Home = ({ experiences, skills }: Props) => {
 
 export default Home;
 
-export async function getStaticProps() {
-  const res = await sanityClient.fetch(query);
-  const experiences: Experience[] = res;
-  const res3 = await sanityClient.fetch(query3);
-  const skills: Skill[] = res3;
-  return {
-    props: {
-      experiences,
-      skills,
-    },
-    revalidate: 10,
-  };
-}
+// export async function getStaticProps() {
+//   const res = await sanityClient.fetch(query);
+//   const experiences: Experience[] = res;
+//   const res3 = await sanityClient.fetch(query3);
+//   const skills: Skill[] = res3;
+//   return {
+//     props: {
+//       experiences,
+//       skills,
+//     },
+//     revalidate: 10,
+//   };
+// }
